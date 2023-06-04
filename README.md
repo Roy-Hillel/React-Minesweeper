@@ -14,5 +14,6 @@ To launch the app:
 
 Enjoy!
 
-<img width="1011" alt="screenshot" src="https://github.com/Roy-Hillel/React-Minesweeper/assets/120474405/4d5a78dc-5763-4813-9b0d-c1f6694a7835">
+<img width="1011" alt="screen-shot" src="https://github.com/Roy-Hillel/React-Minesweeper/assets/120474405/bd2fb02e-77e8-4088-9acc-171dfe9d48ce">
+
 
