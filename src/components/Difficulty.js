@@ -28,18 +28,6 @@ const Difficulty = (props) => {
         </CDropdownMenu>
       </CDropdown>
     </div>
-    // <div style={{ display: "flex", fontSize: "1.25rem", fontWeight: "500" }}>
-    //   <label>
-    //     Choose Difficulty: &nbsp;
-    //     <select onChange={handleOnChange} value={diff}>
-    //       <option value="0">Easy</option>
-
-    //       <option value="1">Medium</option>
-
-    //       <option value="2">Hard</option>
-    //     </select>
-    //   </label>
-    // </div>
   )
 }
 

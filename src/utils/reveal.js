@@ -7,10 +7,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
     // if value != 0 - continue without adding neighbors
     temp = zeroStack.pop()
     current = arr[temp.x][temp.y]
-    console.log(
-      `popped ${[current.x, current.y]} from stack with value ${current.value}`
-    )
-
     if (current.revealed) continue
     else {
       current.revealed = true
@@ -23,7 +19,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
           !arr[current.x - 1][current.y].flagged &&
           !arr[current.x - 1][current.y].revealed
         ) {
-          console.log(`pushing ${[current.x - 1, current.y]}`)
           zeroStack.push(arr[current.x - 1][current.y])
         } // push up
         if (current.y > 0) {
@@ -32,7 +27,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
             !arr[current.x - 1][current.y - 1].flagged &&
             !arr[current.x - 1][current.y - 1].revealed
           ) {
-            console.log(`pushing ${[current.x - 1, current.y - 1]}`)
             zeroStack.push(arr[current.x - 1][current.y - 1])
           } // push up left
         }
@@ -41,7 +35,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
             !arr[current.x - 1][current.y + 1].flagged &&
             !arr[current.x - 1][current.y + 1].revealed
           ) {
-            console.log(`pushing ${[current.x - 1, current.y + 1]}`)
             zeroStack.push(arr[current.x - 1][current.y + 1])
           }
         } // if right exists - push up right
@@ -51,7 +44,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
         !arr[current.x][current.y - 1].flagged &&
         !arr[current.x][current.y - 1].revealed
       ) {
-        console.log(`pushing ${[current.x, current.y - 1]}`)
         zeroStack.push(arr[current.x][current.y - 1])
       } // push left
       if (current.x < arr.length - 1) {
@@ -60,7 +52,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
           !arr[current.x + 1][current.y].flagged &&
           !arr[current.x + 1][current.y].revealed
         ) {
-          console.log(`pushing ${[current.x + 1, current.y]}`)
           zeroStack.push(arr[current.x + 1][current.y])
         } // push down
         if (current.y < arr[0].length - 1) {
@@ -69,7 +60,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
             !arr[current.x + 1][current.y + 1].flagged &&
             !arr[current.x + 1][current.y + 1].revealed
           ) {
-            console.log(`pushing ${[current.x + 1, current.y + 1]}`)
             zeroStack.push(arr[current.x + 1][current.y + 1])
           } // push down right
         }
@@ -78,7 +68,6 @@ export const reveal = (arr, x, y, newNonMineCount) => {
             !arr[current.x + 1][current.y - 1].flagged &&
             !arr[current.x + 1][current.y - 1].revealed
           ) {
-            console.log(`pushing ${[current.x + 1, current.y - 1]}`)
             zeroStack.push(arr[current.x + 1][current.y - 1])
           }
         } // if left exists - push down left
@@ -88,11 +77,9 @@ export const reveal = (arr, x, y, newNonMineCount) => {
         !arr[current.x][current.y + 1].flagged &&
         !arr[current.x][current.y + 1].revealed
       ) {
-        console.log(`pushing ${[current.x, current.y + 1]}`)
         zeroStack.push(arr[current.x][current.y + 1])
       } // push right
     }
   }
-  console.log(zeroStack)
   return { arr, newNonMineCount }
 }

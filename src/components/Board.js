@@ -7,7 +7,7 @@ import Timer from "./Timer"
 
 const Board = (props) => {
   const [grid, setGrid] = useState([])
-  const [nonMineCount, setNonMineCount] = useState("Building board...")
+  const [nonMineCount, setNonMineCount] = useState("Building board...") // cells revealed/flagged
   const [mineLocations, setMineLocations] = useState([])
   const [gameOver, setGameOver] = useState(false)
   const [gameResult, setGameResult] = useState(false)
@@ -20,12 +20,11 @@ const Board = (props) => {
     { rows: 18, cols: 18, bombs: 40 },
     { rows: 24, cols: 24, bombs: 70 },
   ]
-  // ComponentDidMount
+  // onMount or difficulty changed
   useEffect(() => {
     restartGame()
   }, [props])
   function freshBoard() {
-    // const boardSize = { rows: 5, cols: 5, bombs: 3 }
     const boardSize = sizes[props.diff]
     const newBoard = createBoard(boardSize)
     console.log(`created board of size`)
@@ -37,11 +36,10 @@ const Board = (props) => {
   }
 
   useEffect(() => {
-    // setTimeout(() => checkWin(), 500)
     checkWin()
   }, [nonMineCount, flagsLeft])
 
-  // On Right Click / Flag/Unflag cell
+  // On right click -> Flag/Unflag cell
   const updateFlag = (e, x, y) => {
     e.preventDefault()
     let newGrid = JSON.parse(JSON.stringify(grid))
@@ -65,7 +63,7 @@ const Board = (props) => {
     }
   }
 
-  // Reveal cell
+  // On left click -> Reveal cell
   const revealCell = (x, y) => {
     let newGrid = JSON.parse(JSON.stringify(grid))
     if (!started) setStarted(true)
