@@ -13,3 +13,6 @@ To launch the app:
 - the app will be launched on localhost port 3000
 
 Enjoy!
+
+<img width="1011" alt="screenshot" src="https://github.com/Roy-Hillel/React-Minesweeper/assets/120474405/4d5a78dc-5763-4813-9b0d-c1f6694a7835">
+
