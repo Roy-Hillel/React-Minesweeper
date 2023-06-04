@@ -1,0 +1,49 @@
+#gameOverImage {
+    opacity: 100;
+    z-index: 4;
+    height: 70%;
+    max-width: 100%;
+    margin: 0 50px;
+    background-repeat: repeat-x;
+    position: relative;
+    padding: 20px;
+    border-radius: 7px;
+}
+h1 {
+    display: flex;
+    align-items: top;
+}
+.lost {
+        background: url("https://www.google.com/logos/fnbx/minesweeper/lose_screen.png") 0px 80px no-repeat;
+}
+.won {
+        background: url("https://www.google.com/logos/fnbx/minesweeper/win_screen.png") 0px 80px no-repeat;
+}
+
+.title {
+    opacity: 100;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 50px;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.tryAgain {
+    opacity: 100;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 50px;
+    border-radius: 7px;
+    background: darkgreen;
+    color: rgb(158, 255, 158);
+    padding: 10px;
+    font-weight: 700;
+}
+.tryAgain:hover {
+    background: rgba(2, 149, 2, 1);
+}

@@ -1,0 +1,24 @@
+.cell {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.easy {
+    width: 40px;
+    height: 40px;
+    font-size: 1.75rem;
+}
+.medium {
+    width: 30px;
+    height: 30px;
+    font-size: 1.3rem;
+}
+.hard {
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+}
