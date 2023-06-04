@@ -7,7 +7,7 @@ It was created with the default create react app.
 
 To launch the app:
 
-- download/clone the repository to your computer
+- download the zip or clone the repository to your machine
 - run command 'npm install' in the root directory (**react-minesweeper**) in your terminal
 - run command 'npm start'
 - the app will be launched on localhost port 3000
